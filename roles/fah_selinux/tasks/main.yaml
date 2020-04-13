@@ -1,0 +1,11 @@
+---
+
+- name: Download SELinux policy
+  get_url:
+    url:
+    dest:
+  when:
+    (ansible_distribution == 'RedHat') or
+    (ansible_distribution == 'CentOS') or
+    (ansible_distribution == 'Fedora') or
+    (ansible_distribution == 'Amazon')
